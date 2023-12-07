@@ -44,9 +44,9 @@ export default {
             }
             fetch(this.urlSignUp, options)
                 .then(response => {
-                    if (response.status === 200) {
+                    if (response.status === 401) {
                         alert("Error Nombre de Usuario o Correo Existente")
-                    } else if (response.status === 401) {
+                    } else if (response.status === 200) {
                         alert("Inicio de Sesion Exitoso")
                     }
                 })
@@ -63,9 +63,9 @@ export default {
             }
             fetch(this.urlLogin, options)
                 .then(response => {
-                    if (response.status === 200) {
+                    if (response.status === 401) {
                         alert("Error Unathorized")
-                    } else if (response.status === 401) {
+                    } else if (response.status === 200) {
                         alert("Inicio de Sesion Exitoso")
                     }
                 })
